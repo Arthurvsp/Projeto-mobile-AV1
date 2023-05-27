@@ -1,11 +1,11 @@
-package com.example.myprojectone.firstAplicattion
+package com.example.myprojectone.firstAplicattion.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.myprojectone.databinding.ActivityBuscaDadosBinding
 import com.example.myprojectone.databinding.ActivityMainBinding
+import com.example.myprojectone.firstAplicattion.models.FuncionarioModelo
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -19,14 +19,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        dbRef = FirebaseDatabase.getInstance().getReference()
+        dbRef = FirebaseDatabase.getInstance().getReference("Pessoa")
         var edNome = binding.editNome
         var edIdade = binding.editIdade
         var edProfissao = binding.editProfissao
         var salva = binding.buttonCadastrar
         var ver = binding.buttonConsultar
 
-        binding.buttonCadastrar!!.setOnClickListener { cadastra ->
+        binding.buttonCadastrar!!.setOnClickListener {
             val empName = edNome.text.toString()
             val empIdade = edIdade.text.toString()
             val empProfissao = edProfissao!!.text.toString()
@@ -58,8 +58,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.buttonConsultar.setOnClickListener {
-            val i = Intent( this, BuscaDados::class.java)
-            startActivity(i)
+            val intent = Intent( this, BuscaDados::class.java)
+            startActivity(intent)
         }
     }
 }

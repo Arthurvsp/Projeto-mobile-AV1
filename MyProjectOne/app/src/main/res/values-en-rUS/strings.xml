@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AppBeta</string>
-    <string name="z">Hello,</string>
-    <string name="nome">Insert your name </string>
-    <string name="sobre">Last name(optional)</string>
-    <string name="next">Next</string>
-    <string name="text_one">\nTo learn more about this application, it is a platform that aims to encourage environmental collaboration among the population. It offers a variety of resources that allow users to participate in activities that contribute to the preservation of the environment. \n\nThrough this application, users can access important information about the environment, such as sustainability tips and recycling information. Additionally, the application allows users to share information with other users, thus enabling the creation of a community of people engaged in the environmental cause. \n\nOne of the most important features is the ability to create collaborative projects with other users. This allows people with common interests to come together to develop activities aimed at preserving the environment in their region. \n\nThis application is a powerful tool for encouraging environmental collaboration among the population and promoting awareness of the importance of environmental preservation. With it, users can contribute to a more sustainable and conscious world. \n\nFor this awareness, here are some strategies to encourage citizen collaboration in solving environmental problems in Recife:
-</string>
-    <string name="text_two">\nAwareness campaigns: It is important to educate people about the negative impacts of environmental pollution and encourage actions that can prevent or reduce its occurrence. Awareness campaigns in schools, universities, social media, and community events can help disseminate important information and encourage the adoption of sustainable practices.\n\nParticipation in environmental monitoring projects: Citizens can be encouraged to monitor the quality of water, air, and soil in their communities. They can be trained to collect data and provide information to government agencies responsible for protecting the environment. This data can be used to identify critical areas and take measures to reduce pollution.\n\nIncentive programs: Programs that offer financial or non-financial incentives for sustainable practices can motivate citizens to act. For example, recycling programs that offer discounts at local stores or services for each amount of recycled waste can encourage people to separate waste correctly and reduce the amount of waste going to landfills.\n\nVoluntary actions: Community clean-up events and other voluntary actions can help bring together people with common interests and promote environmental responsibility. Non-profit organizations can help coordinate these activities and provide information about areas that need attention.\n\nEncouraging sustainable practices in companies: Companies can be incentivized to implement sustainable practices, such as the use of renewable energy, waste reduction, and implementation of recycling programs\n\nIt is important to remember that citizen collaboration is essential to achieve ecological balance and social well-being in Recife.</string>
-
+    <string name="nome">Name</string>
+    <string name="idade">Age</string>
+    <string name="profissao">Profession</string>
+    <string name="cadastrar">Register</string>
+    <string name="entrar">Sign in</string>
+    <string name="consulta">Consult</string>
 </resources>

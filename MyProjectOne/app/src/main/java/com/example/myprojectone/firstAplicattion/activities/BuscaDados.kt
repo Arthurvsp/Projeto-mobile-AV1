@@ -1,11 +1,14 @@
-package com.example.myprojectone.firstAplicattion
+package com.example.myprojectone.firstAplicattion.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myprojectone.R
+import com.example.myprojectone.firstAplicattion.adapties.EmpAdapter
+import com.example.myprojectone.firstAplicattion.models.FuncionarioModelo
 import com.google.firebase.database.*
 
 class BuscaDados : AppCompatActivity() {
@@ -35,34 +38,20 @@ class BuscaDados : AppCompatActivity() {
         empRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Empregador")
+        dbRef = FirebaseDatabase.getInstance().getReference("Pessoa")
 
         dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 empList.clear()
                 if (snapshot.exists()){
                     for (empSnap in snapshot.children){
-                        val empData = empSnap.getValue(EmpresaModelo::class.java)
+                        val empData = empSnap.getValue(FuncionarioModelo::class.java)
                         empList.add(empData!!)
                     }
                     val mAdapter = EmpAdapter(empList)
                     empRecyclerView.adapter = mAdapter
 
-//                    mAdapter.setOnItemClickListener(object : EmpAdapter.onItemClickListener{
-//                        override fun onItemClick(position: Int) {
 //
-//                            val intent = Intent(this@FetchingActivity, EmployeeDetailsActivity::class.java)
-//
-//                            //put extras
-//                            intent.putExtra("empId", empList[position].empId)
-//                            intent.putExtra("empName", empList[position].empNome)
-//                            intent.putExtra("empCargo", empList[position].empCargo)
-//                            intent.putExtra("empSalary", empList[position].emSalario)
-//                            startActivity(intent)
-//                        }
-//
-//                    })
-
                     empRecyclerView.visibility = View.VISIBLE
                     tvLoadingData.visibility = View.GONE
                 }
@@ -74,5 +63,4 @@ class BuscaDados : AppCompatActivity() {
 
         })
     }
-}
 }

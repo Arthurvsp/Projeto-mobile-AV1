@@ -12,14 +12,10 @@
         android:theme="@style/Theme.MyProjectOne"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity3"
-            android:exported="false" />
-
-        <activity
-            android:name=".MainActivity2"
+            android:name=".firstAplicattion.activities.BuscaDados"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".firstAplicattion.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
