@@ -1,5 +1,5 @@
-# Projeto-mobile-AV1
-Este projeto se trata da disciplina de Programação Mobile Coding, e será usado para verificação de aprendizagem da primeira unidade.
+# Projeto-mobile
+Este projeto se trata da disciplina de Programação Mobile Coding, e será usado para verificação de aprendizagem.
 
 Tema:  estimular a colaboração dos cidadãos para solucionar diferentes tipos de poluições ambientais do Recife.
 
