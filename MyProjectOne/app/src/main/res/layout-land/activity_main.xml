@@ -4,10 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".firstAplicattion.activities.MainActivity">
 
     <EditText
-        android:id="@+id/edit_name"
+        android:id="@+id/editProfissao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/profissao"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_consultar"
+        app:layout_constraintEnd_toEndOf="@+id/edit_nome"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_nome"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nome"
+        app:layout_constraintVertical_bias="0.988"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/edit_nome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -23,32 +41,47 @@
         tools:ignore="Autofill" />
 
     <Button
-        android:id="@+id/button_next"
+        android:id="@+id/button_consultar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next"
+        android:text="@string/cadastrar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.865" />
+        app:layout_constraintEnd_toEndOf="@+id/edit_nome"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_nome"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nome"
+        app:layout_constraintVertical_bias="0.745" />
 
     <EditText
-        android:id="@+id/editSobrenome"
+        android:id="@+id/editIdade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:ems="10"
-        android:hint="@string/sobre"
+        android:hint="@string/idade"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_next"
-        app:layout_constraintEnd_toEndOf="@+id/edit_name"
+        app:layout_constraintBottom_toTopOf="@+id/button_consultar"
+        app:layout_constraintEnd_toEndOf="@+id/edit_nome"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edit_name"
-        app:layout_constraintTop_toBottomOf="@+id/edit_name"
+        app:layout_constraintStart_toStartOf="@+id/edit_nome"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nome"
         app:layout_constraintVertical_bias="0.096"
         tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/cadastra"
+        android:layout_width="145dp"
+        android:layout_height="56dp"
+        android:text="Cadastre-se"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/edit_nome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.827" />
 </androidx.constraintlayout.widget.ConstraintLayout>
